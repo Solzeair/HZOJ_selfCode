@@ -10,7 +10,6 @@
 int main() {
     float l, w;
     scanf("%f%f", &l, &w);
-    printf("%.2f\n", (l + w) * 2);
-    printf("%.2f", l * w);
+    printf("%.2f\n%.2f", (l + w) * 2, l * w);
     return 0;
 }
