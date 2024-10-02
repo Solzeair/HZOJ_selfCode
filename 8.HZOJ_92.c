@@ -6,10 +6,11 @@
  ************************************************************************/
 
 #include<stdio.h>
-
+//宏定义
 #define PAI 3.14
 
 int main() {
+	//const float PI=3.14; 不用宏定义
     double r;
     scanf("%lf", &r);
     printf("%.2lf\n%.2lf", 2.0 * PAI * r, PAI * r * r);
