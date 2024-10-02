@@ -10,6 +10,6 @@
 int main() {
     int a, b, c;
     scanf("%d%d%d", &a, &b, &c);
-    printf("%d", a*b*c);
+    printf("%d", a*b*c);//printf中格式化字符串末尾尽量加/n，本题为保证输出结果一致而未加
     return 0;
 }
