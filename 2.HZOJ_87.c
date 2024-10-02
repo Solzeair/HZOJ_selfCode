@@ -6,10 +6,11 @@
  ************************************************************************/
 
 #include<stdio.h>
-
+	
 int main() {
-    float l, w;
-    scanf("%f\n%f", &l, &w);
+	//浮点型尽量用double，减少溢出的可能性，本题测试数据不会溢出
+    float l, w;//l，w是length和width的缩写，个人习惯便于辨认
+    scanf("%f%f", &l, &w);
     printf("%.2f\n%.2f", 2 * (l + w), l * w);
     return 0;
 }
