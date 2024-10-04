@@ -10,6 +10,6 @@
 int main() {
     int n;
     scanf("%d", &n);
-    printf("%s", n % 7 == 0 && n % 2 ? "YES" : "NO");
+    printf("%s", n % 7 == 0 && n % 2 ? "YES" : "NO");//n%2的值为真，不用再加!=0
     return 0;
 }
