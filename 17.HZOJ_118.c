@@ -10,7 +10,9 @@
 int main() {
     int y, n;
     scanf("%d", &y);
-    n = y % 12; 
+    n = y % 12;//找到第一个能整除12的年份
+    //也可以就与1900年比较，注意负数，+12化为正数,若原本为整数再%12，第一个为rat
+    //switch (((y - 1900) % 12 + 12) % 12) {
     switch (n) {
         case 0: printf("monkey"); break;
         case 1: printf("rooster"); break;
