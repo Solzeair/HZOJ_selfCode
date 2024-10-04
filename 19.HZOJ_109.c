@@ -10,6 +10,8 @@
 int main() {
     char s[10];
     scanf("%s", s);
+    //假设传入1235，则s[0]中存储的是49的ASCII码，为字符'1'
+    //建议把条件写为(s[0] - 48) % 2 == 0
     if (s[0] % 2 == 0) {
         printf("YES");
         return 0;
@@ -23,7 +25,6 @@ int main() {
             printf("YES");
             return 0;
     } else printf("NO");
-
     return 0;
 }
 
