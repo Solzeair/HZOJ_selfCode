@@ -16,7 +16,7 @@ int main() {
 }
 
 //2.the second: array type
-//可将数字看作一串字符，每一位上的数字就是单纯的一个字符
+//可将数字看作一串字符，每一位的数字就是单纯的一个字符
 #include<stdio.h>
 
 int main() {
