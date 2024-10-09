@@ -9,7 +9,7 @@
 #include <math.h>
 
 int main() {
-    int a = 0, b = 0, c = 0;//c判断是否打印空格
+    int a = 0, b = 0, first = 0;//first判断是否打印空格
     scanf("%d%d", &a, &b);
     for (int i = a; i <= b; i++) {
         double tmp = i;
@@ -20,8 +20,9 @@ int main() {
             break;//减少循环次数
         }
         if (flat == 1 && i / 10000 == i % 10 && i % 10000 / 1000 == i % 100 / 10) {//判断是否回文数
-            if (c) printf(" ");//判断是否打印空格
-            c += printf("%d", i);//先打印再赋值
+            if (first) printf(" ");//判断是否打印空格
+            first += 1;
+            printf("%d", i);//先打印再赋值
         }
     }
     return 0;
