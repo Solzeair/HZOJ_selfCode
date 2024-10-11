@@ -5,6 +5,30 @@
 	> Created Time: Fri 04 Oct 2024 10:10:27 PM CST
  ************************************************************************/
 
+#include <stdio.h>
+
+int main() {
+    int n;
+    int flag = 0;//数位奇偶标识
+    scanf("%d", &n);
+    for (int i = 0; i < 4 && flag == 0; i++, n /= 10) {//循环后减去最后一位
+        int tmp = n % 10;//每次循环取最后一位
+        switch (tmp) {
+            case 0:
+            case 2: 
+            case 4:
+            case 6:
+            case 8: flag = 1; break;//判断偶数
+            default: break;
+        }
+        //if (flag == 1) break;判断是否结束循环，可直接写在循环条件判断里
+    }
+    if (flag == 1) printf("YES");
+    else printf("NO");
+    return 0;
+}
+
+/*数组写法
 #include <stdio.h> 
 
 int main() {
@@ -27,6 +51,7 @@ int main() {
     } else printf("NO");
     return 0;
 }
+*/
 
 /*扩展应用sccanf
 #include <stdio.h>
