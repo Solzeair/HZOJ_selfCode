@@ -14,5 +14,36 @@ int main() {
     double r;
     scanf("%lf", &r);
     printf("%.2lf\n%.2lf", 2.0 * PAI * r, PAI * r * r);
+    //当PAI*r*r写成r*r*PAI时会出现精度问题，此问题暂不做解释
     return 0;
 }
+
+//该题具有精度问题，计算顺序不同导致结果不同#include<stdio.h>
+//错误示例
+/*#include <stdio.h>
+#define PI 3.14
+int main() {
+    double r;
+    scanf("%lf", &r);
+    double tmp;
+    tmp = r * r * PI;
+    printf("%lf\n%.2lf\n",tmp, tmp);
+    tmp = PI * r * r;
+    printf("%lf\n%.2lf\n",tmp, tmp);
+    return 0;
+}
+*/
+//提高精度写法
+/*#include<stdio.h>
+#define PI 3.14
+int main(){
+    long double r;
+    scanf("%Lf", &r);
+    long double tmp;
+    tmp = r * r * PI;
+    printf("%Lf\n%.2Lf\n",tmp, tmp);
+    tmp = PI * r * r;
+    printf("%Lf\n%.2Lf\n",tmp, tmp);
+    return 0;
+}
+*/
