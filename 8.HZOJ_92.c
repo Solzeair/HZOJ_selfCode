@@ -18,7 +18,7 @@ int main() {
     return 0;
 }
 
-//该题具有精度问题，计算顺序不同导致结果不同#include<stdio.h>
+//该题具有精度问题，计算顺序不同导致结果不同
 //错误示例
 /*#include <stdio.h>
 #define PI 3.14
