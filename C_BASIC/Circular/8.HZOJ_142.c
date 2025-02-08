@@ -54,3 +54,40 @@ int main() {
     return 0;
 }
 */
+
+/* 体系化实现
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+int is_prime(int n) {
+    for (int i = 2, I = sqrt(n); i <= I; i++) {
+        if (n % i == 0) return 0;
+    }
+    return 1;
+}
+
+int is_huiwen(int n) {
+    char str[10] = {0};
+    sprintf(str, "%d", n);
+    int len = strlen(str);
+    for (int i = 0, I = len - 1; i <= len / 2; i++, I--) {
+        if (str[i] == str[I]) continue;
+        return 0;
+    }
+    return 1;
+}
+
+int main() {
+    int a, b;
+    scanf("%d%d", &a, &b);
+    int flag = 0;
+    for (int i = a; i <= b; i++) {
+        if (!is_prime(i)) continue;
+        if (!is_huiwen(i)) continue;
+        if (flag) printf(" ");
+        flag += printf("%d", i);
+    }
+    return 0;
+}
+*/
